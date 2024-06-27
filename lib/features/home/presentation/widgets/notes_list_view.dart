@@ -17,7 +17,7 @@ class NotesListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Container(
             margin: EdgeInsets.only(
-              bottom: 10.h,
+              bottom: 8.h,
             ),
             child: const CustomNoteItem(),
           );

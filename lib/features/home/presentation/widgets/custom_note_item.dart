@@ -9,7 +9,12 @@ class CustomNoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 16.h),
+      padding: EdgeInsets.only(
+        bottom: 20.h,
+        top: 10.h,
+        left: 10.w,
+        right: 10.w,
+      ),
       decoration: BoxDecoration(
         color: Colors.orange,
         borderRadius: BorderRadius.circular(
@@ -30,17 +35,17 @@ class CustomNoteItem extends StatelessWidget {
             subtitle: Padding(
               padding: EdgeInsets.only(top: 10.h),
               child: Text(
-                'Build your carrer with tharwat shamy',
+                'Build your carrer with tharwat samy',
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.5),
-                  fontSize: 16.sp,
+                  fontSize: 15.sp,
                 ),
               ),
             ),
             trailing: Icon(
               FontAwesomeIcons.trash,
               color: AppColors.kPrimaryColor,
-              size: 22,
+              size: 20,
             ),
           ),
           Padding(
