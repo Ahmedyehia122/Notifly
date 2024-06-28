@@ -16,23 +16,27 @@ class AddNoteButtonSheet extends StatelessWidget {
         horizontal: 16.w,
         vertical: 25.h,
       ),
-      child: Column(
-        children: [
-          CustomTextField(
-            text: 'Title',
-            controller: title,
-          ),
-          SizedBox(
-            height: 10.h,
-          ),
-          CustomTextField(
-            text: 'Content',
-            controller: content,
-            maxLines: 5,
-          ),
-          const Spacer(),
-          const CustomButton(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            CustomTextField(
+              text: 'Title',
+              controller: title,
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            CustomTextField(
+              text: 'Content',
+              controller: content,
+              maxLines: 5,
+            ),
+            SizedBox(
+              height: 40.h,
+            ),
+            const CustomButton(),
+          ],
+        ),
       ),
     );
   }
