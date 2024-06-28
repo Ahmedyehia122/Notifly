@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:note_app/features/home/presentation/views/notes_view.dart';
+import 'package:note_app/core/constants/routes.dart';
+import 'package:note_app/routes.dart';
 
 void main() {
   runApp(const NoteApp());
@@ -22,7 +23,8 @@ class NoteApp extends StatelessWidget {
             fontFamily: 'Poppnis',
             brightness: Brightness.dark,
           ),
-          home: const NotesView(),
+          initialRoute: AppRoutes.initRoute,
+          routes: routes,
         );
       },
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:note_app/features/home/presentation/widgets/custom_button.dart';
-import 'package:note_app/features/home/presentation/widgets/custom_text_field.dart';
+import 'package:note_app/features/notes/presentation/widgets/custom_button.dart';
+import 'package:note_app/core/customs/custom_text_field.dart';
 
 class AddNoteButtonSheet extends StatelessWidget {
   final TextEditingController title = TextEditingController();
