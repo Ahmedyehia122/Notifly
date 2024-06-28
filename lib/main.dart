@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:note_app/core/constants/fonts.dart';
 import 'package:note_app/core/constants/routes.dart';
 import 'package:note_app/routes.dart';
 
@@ -20,7 +21,7 @@ class NoteApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            fontFamily: 'Poppnis',
+            fontFamily: AppFonts.poppnis,
             brightness: Brightness.dark,
           ),
           initialRoute: AppRoutes.initRoute,
