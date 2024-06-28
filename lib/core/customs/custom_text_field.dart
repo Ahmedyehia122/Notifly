@@ -20,6 +20,13 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       cursorColor: AppColors.kSecondaryColor,
       maxLines: maxLines,
+      validator: (val) {
+        if (val?.isEmpty ?? true) {
+          return 'Can\'t be empty!';
+        } else {
+          return null;
+        }
+      },
       decoration: InputDecoration(
         hintText: text,
         hintStyle: TextStyle(color: AppColors.kSecondaryColor),
