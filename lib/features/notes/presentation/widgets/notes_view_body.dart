@@ -17,7 +17,7 @@ class NotesViewBody extends StatelessWidget {
         child: const Column(
           children: [
             CustomAppBar(
-              textName: 'Tasks',
+              textName: 'Notes',
               icon: Icon(Icons.search),
             ),
             Expanded(

@@ -4,11 +4,13 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:note_app/core/constants/fonts.dart';
 import 'package:note_app/core/constants/routes.dart';
 import 'package:note_app/core/constants/strings.dart';
+import 'package:note_app/features/notes/models/note_model.dart';
 import 'package:note_app/routes.dart';
 
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox(AppStrings.kNotesBox);
+  Hive.registerAdapter(NoteModelAdapter());
   runApp(
     const NoteApp(),
   );
