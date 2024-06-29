@@ -32,7 +32,7 @@ class NoteApp extends StatelessWidget {
           providers: [
             BlocProvider(
               create: (context) => AddNotesCubit(),
-            )
+            ), 
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
