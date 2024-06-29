@@ -13,8 +13,8 @@ import 'package:note_app/simble_bloc_observer.dart';
 void main() async {
   await Hive.initFlutter();
   Bloc.observer = SimbleBlocObserver();
-  await Hive.openBox(AppStrings.kNotesBox);
   Hive.registerAdapter(NoteModelAdapter());
+  await Hive.openBox<NoteModel>(AppStrings.kNotesBox);
   runApp(
     const NoteApp(),
   );
@@ -30,21 +30,14 @@ class NoteApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MultiBlocProvider(
-          providers: [
-            BlocProvider(
-              create: (context) => AddNotesCubit(),
-            ),
-          ],
-          child: MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              fontFamily: AppFonts.poppnis,
-              brightness: Brightness.dark,
-            ),
-            initialRoute: AppRoutes.initRoute,
-            routes: routes,
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            fontFamily: AppFonts.poppnis,
+            brightness: Brightness.dark,
           ),
+          initialRoute: AppRoutes.initRoute,
+          routes: routes,
         );
       },
     );

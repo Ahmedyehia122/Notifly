@@ -40,7 +40,7 @@ class CustomNoteItem extends StatelessWidget {
                 ),
               ),
               subtitle: Padding(
-                padding: EdgeInsets.only(top: 10.h),
+                padding: EdgeInsets.only(top: 10.h, bottom: 10.h),
                 child: Text(
                   'Build your carrer with tharwat samy',
                   style: TextStyle(

@@ -3,8 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:note_app/core/constants/colors.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.onPressed});
+  const CustomButton({super.key, this.onPressed, this.isLoading = false});
   final void Function()? onPressed;
+  final bool isLoading;
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +18,21 @@ class CustomButton extends StatelessWidget {
       child: Align(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 12.h),
-          child: const Text(
-            'Add',
-            style: TextStyle(
-              color: Colors.black,
-            ),
-          ),
+          child: isLoading
+              ? SizedBox(
+                  height: 23.h,
+                  width: 23.w,
+                  child: CircularProgressIndicator(
+                    backgroundColor: AppColors.kPrimaryColor,
+                  ),
+                )
+              : Text(
+                  'Add',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18.sp,
+                  ),
+                ),
         ),
       ),
     );
