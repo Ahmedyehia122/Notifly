@@ -8,9 +8,11 @@ import 'package:note_app/core/constants/strings.dart';
 import 'package:note_app/features/notes/data/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:note_app/features/notes/models/note_model.dart';
 import 'package:note_app/routes.dart';
+import 'package:note_app/simble_bloc_observer.dart';
 
 void main() async {
   await Hive.initFlutter();
+  Bloc.observer = SimbleBlocObserver();
   await Hive.openBox(AppStrings.kNotesBox);
   Hive.registerAdapter(NoteModelAdapter());
   runApp(
@@ -32,7 +34,7 @@ class NoteApp extends StatelessWidget {
           providers: [
             BlocProvider(
               create: (context) => AddNotesCubit(),
-            ), 
+            ),
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
