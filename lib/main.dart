@@ -5,7 +5,6 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:note_app/core/constants/fonts.dart';
 import 'package:note_app/core/constants/routes.dart';
 import 'package:note_app/core/constants/strings.dart';
-import 'package:note_app/features/notes/data/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:note_app/features/notes/models/note_model.dart';
 import 'package:note_app/routes.dart';
 import 'package:note_app/simble_bloc_observer.dart';
