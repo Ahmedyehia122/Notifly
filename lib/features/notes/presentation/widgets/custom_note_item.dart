@@ -17,6 +17,7 @@ class CustomNoteItem extends StatelessWidget {
       onTap: () {
         Navigator.of(context).pushNamed(
           AppRoutes.editNotesView,
+          arguments: note,
         );
       },
       child: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/features/notes/models/note_model.dart';
 import 'package:note_app/features/notes/presentation/widgets/edit_note_view_body.dart';
 
 class EditNoteView extends StatelessWidget {
@@ -6,6 +7,9 @@ class EditNoteView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return EditNoteViewBody();
+    NoteModel note = ModalRoute.of(context)!.settings.arguments as NoteModel;
+    return EditNoteViewBody(
+      note: note,
+    );
   }
 }

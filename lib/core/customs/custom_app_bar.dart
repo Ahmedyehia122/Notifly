@@ -7,9 +7,11 @@ class CustomAppBar extends StatelessWidget {
     super.key,
     required this.textName,
     required this.icon,
+    this.onTapIcon,
   });
   final String textName;
   final Icon icon;
+  final void Function()? onTapIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,9 @@ class CustomAppBar extends StatelessWidget {
           textName,
           style: TextStyle(fontSize: 28.sp),
         ),
-        CustomSearchIcon(
+        CustomIcon(
           icon: icon,
+          onTap: onTapIcon,
         )
       ],
     );
