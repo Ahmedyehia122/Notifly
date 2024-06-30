@@ -3,9 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:note_app/core/constants/colors.dart';
 import 'package:note_app/core/constants/routes.dart';
+import 'package:note_app/features/notes/models/note_model.dart';
 
 class CustomNoteItem extends StatelessWidget {
-  const CustomNoteItem({super.key});
+  const CustomNoteItem({super.key, required this.notes});
+  final NoteModel notes;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class CustomNoteItem extends StatelessWidget {
           children: [
             ListTile(
               title: Text(
-                'Flutter Tips',
+                notes.title,
                 style: TextStyle(
                   color: AppColors.kPrimaryColor,
                   fontSize: 23.sp,
@@ -42,7 +44,7 @@ class CustomNoteItem extends StatelessWidget {
               subtitle: Padding(
                 padding: EdgeInsets.only(top: 10.h, bottom: 10.h),
                 child: Text(
-                  'Build your carrer with tharwat samy',
+                  notes.subTitle,
                   style: TextStyle(
                     color: Colors.black.withOpacity(0.5),
                     fontSize: 15.sp,
@@ -60,7 +62,7 @@ class CustomNoteItem extends StatelessWidget {
                 right: 15.w,
               ),
               child: Text(
-                'May21,2024',
+                notes.date,
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.4),
                 ),
