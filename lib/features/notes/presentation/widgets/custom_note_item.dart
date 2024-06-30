@@ -51,10 +51,15 @@ class CustomNoteItem extends StatelessWidget {
                   ),
                 ),
               ),
-              trailing: Icon(
-                FontAwesomeIcons.trash,
-                color: AppColors.kPrimaryColor,
-                size: 20,
+              trailing: IconButton(
+                onPressed: () {
+                  note.delete();
+                },
+                icon: Icon(
+                  FontAwesomeIcons.trash,
+                  color: AppColors.kPrimaryColor,
+                  size: 20,
+                ),
               ),
             ),
             Padding(
