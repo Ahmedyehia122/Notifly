@@ -6,6 +6,7 @@ import 'package:note_app/core/customs/custom_text_field.dart';
 import 'package:note_app/features/notes/data/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:note_app/features/notes/models/note_model.dart';
 import 'package:note_app/features/notes/presentation/widgets/custom_button.dart';
+import 'package:note_app/features/notes/presentation/widgets/custom_colors_list_view.dart';
 
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({super.key});
@@ -40,6 +41,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
             controller: content,
             maxLines: 5,
           ),
+          SizedBox(
+            height: 10.h,
+          ),
+          const CustomColorsListView(),
           SizedBox(
             height: 40.h,
           ),
