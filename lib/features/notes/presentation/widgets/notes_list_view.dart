@@ -27,7 +27,7 @@ class NotesListView extends StatelessWidget {
                   bottom: 8.h,
                 ),
                 child: CustomNoteItem(
-                  notes: notes[index],
+                  note: notes[index],
                 ),
               );
             },

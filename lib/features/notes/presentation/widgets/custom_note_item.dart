@@ -6,8 +6,8 @@ import 'package:note_app/core/constants/routes.dart';
 import 'package:note_app/features/notes/models/note_model.dart';
 
 class CustomNoteItem extends StatelessWidget {
-  const CustomNoteItem({super.key, required this.notes});
-  final NoteModel notes;
+  const CustomNoteItem({super.key, required this.note});
+  final NoteModel note;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class CustomNoteItem extends StatelessWidget {
           right: 10.w,
         ),
         decoration: BoxDecoration(
-          color: Colors.orange,
+          color: Color(note.color),
           borderRadius: BorderRadius.circular(
             16.r,
           ),
@@ -35,7 +35,7 @@ class CustomNoteItem extends StatelessWidget {
           children: [
             ListTile(
               title: Text(
-                notes.title,
+                note.title,
                 style: TextStyle(
                   color: AppColors.kPrimaryColor,
                   fontSize: 23.sp,
@@ -44,7 +44,7 @@ class CustomNoteItem extends StatelessWidget {
               subtitle: Padding(
                 padding: EdgeInsets.only(top: 10.h, bottom: 10.h),
                 child: Text(
-                  notes.subTitle,
+                  note.subTitle,
                   style: TextStyle(
                     color: Colors.black.withOpacity(0.5),
                     fontSize: 15.sp,
@@ -62,7 +62,7 @@ class CustomNoteItem extends StatelessWidget {
                 right: 15.w,
               ),
               child: Text(
-                notes.date,
+                note.date,
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.4),
                 ),

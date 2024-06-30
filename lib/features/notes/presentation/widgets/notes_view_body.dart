@@ -21,7 +21,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return SafeArea( 
       child: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 20.w,
