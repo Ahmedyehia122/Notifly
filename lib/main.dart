@@ -5,6 +5,7 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:note_app/core/constants/fonts.dart';
 import 'package:note_app/core/constants/routes.dart';
 import 'package:note_app/core/constants/strings.dart';
+import 'package:note_app/features/notes/data/cubits/notes_cubit/notes_cubit_cubit.dart';
 import 'package:note_app/features/notes/models/note_model.dart';
 import 'package:note_app/routes.dart';
 import 'package:note_app/simble_bloc_observer.dart';
@@ -29,14 +30,17 @@ class NoteApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            fontFamily: AppFonts.poppnis,
-            brightness: Brightness.dark,
+        return BlocProvider(
+          create: (context) => NotesCubitCubit(),
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              fontFamily: AppFonts.poppnis,
+              brightness: Brightness.dark,
+            ),
+            initialRoute: AppRoutes.initRoute,
+            routes: routes,
           ),
-          initialRoute: AppRoutes.initRoute,
-          routes: routes,
         );
       },
     );

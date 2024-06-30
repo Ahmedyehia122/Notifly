@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:note_app/core/constants/colors.dart';
 import 'package:note_app/core/constants/routes.dart';
+import 'package:note_app/features/notes/data/cubits/notes_cubit/notes_cubit_cubit.dart';
 import 'package:note_app/features/notes/models/note_model.dart';
 
 class CustomNoteItem extends StatelessWidget {
@@ -54,6 +56,7 @@ class CustomNoteItem extends StatelessWidget {
               trailing: IconButton(
                 onPressed: () {
                   note.delete();
+                  BlocProvider.of<NotesCubitCubit>(context).fetchNotes();
                 },
                 icon: Icon(
                   FontAwesomeIcons.trash,
