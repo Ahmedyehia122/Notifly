@@ -12,7 +12,7 @@ class CustomColorItem extends StatelessWidget {
     return isActive
         ? CircleAvatar(
             radius: 30,
-            backgroundColor: Colors.cyan,
+            backgroundColor: Colors.cyan[700],
             child: CircleAvatar(
               radius: 27.r,
               backgroundColor: color,
