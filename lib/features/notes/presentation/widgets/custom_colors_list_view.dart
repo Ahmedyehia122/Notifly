@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:note_app/features/notes/data/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:note_app/features/notes/presentation/widgets/custom_color_item.dart';
 
 class CustomColorsListView extends StatefulWidget {
@@ -32,6 +34,7 @@ class _CustomColorsListViewState extends State<CustomColorsListView> {
             child: GestureDetector(
               onTap: () {
                 currentIndex = index;
+                BlocProvider.of<AddNotesCubit>(context).color = colors[index];
                 setState(() {});
               },
               child: CustomColorItem(
