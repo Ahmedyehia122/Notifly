@@ -3,8 +3,12 @@
  Notifly - your offline digital sticky note companion! Effortlessly jot down ideas, tasks, and reminders with a splash of color and a touch of time, all in the palm of your hand. A minimalist's dream, where productivity and personalization collide, no internet required.
  
  <br/>
-
+ 
   ## 🚀 Getting Started
+
+   <img src ="https://github.com/Ahmedyehia122/Notifly/assets/142153775/2dc65400-943a-42cc-ad9a-04316a2bf976"   >
+
+   <br/>
   
    ## 📸 Screen Record
  
